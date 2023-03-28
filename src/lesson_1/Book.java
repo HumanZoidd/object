@@ -32,17 +32,17 @@ public class Book {
                 ", author=" + author +
                 '}';
     }
-//
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(nameBook, book.nameBook) && Objects.equals(author, book.author);
+        return yearOfPublication == book.yearOfPublication;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nameBook, author);
+        return Objects.hash(yearOfPublication);
     }
 }
